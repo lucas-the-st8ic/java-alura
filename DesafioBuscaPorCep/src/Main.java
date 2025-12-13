@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
@@ -15,7 +16,9 @@ public class Main {
         try {
             Endereco enderecoPesquisa = pesquisaCep.pesquisaEndereco(cep);
             System.out.println(enderecoPesquisa);
-        } catch (RuntimeException e) {
+            ArquivoResultadoBusca novoArquivo = new ArquivoResultadoBusca();
+            novoArquivo.salvaOArquivoResultadoBusca(enderecoPesquisa);
+        } catch (RuntimeException | IOException e) {
             System.out.println("Erro ao pesquisar: " + e.getMessage());
             System.out.println("Busca Encerrada");
         }
