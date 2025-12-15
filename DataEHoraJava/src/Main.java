@@ -1,4 +1,5 @@
-package alura.formatosdedataehora;
+import alura.formatosdedataehora.CriaTarefa;
+import alura.formatosdedataehora.DataEHoraFormatados;
 
 import java.time.*;
 import java.time.format.DateTimeFormatter;
@@ -43,6 +44,10 @@ public class Main {
         LocalDate dataPagamento = LocalDate.parse("2025-10-30");
         Period periodo = Period.between(dataDeCompra, dataPagamento);
         System.out.println("Diferença em dias: " + periodo.getDays());
+
+        CriaTarefa novaTarefa = new CriaTarefa("Ir para academia");
+
+        DataEHoraFormatados relDespesas = new DataEHoraFormatados("Despesas");
     }
 
 }
