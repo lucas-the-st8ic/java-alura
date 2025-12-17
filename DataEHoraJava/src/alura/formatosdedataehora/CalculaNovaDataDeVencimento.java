@@ -9,21 +9,24 @@ public class CalculaNovaDataDeVencimento {
         Scanner input = new Scanner(System.in);
 
         LocalDate dataDeVencimento;
-        String novaDataDeVencimento;
+        LocalDate novaDataDeVencimento;
         int quantidadeDeMeses;
-        String stringData;
+        String stringData = " ";
 
         DateTimeFormatter formatacaoData =  DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
-        System.out.println("Insira a data de vencimento: ");
+        System.out.println("Insira a data de vencimento (dd/MM/yyyy): ");
         stringData = input.nextLine();
 
-        dataDeVencimento = LocalDate.parse(LocalDate.parse(stringData, formatacaoData).format(formatacaoData));
+        dataDeVencimento = LocalDate.parse(stringData, formatacaoData);
+
 
         System.out.println("Quantos meses você quer aprazar a data de vencimento? ");
         quantidadeDeMeses = input.nextInt();
 
-        novaDataDeVencimento = dataDeVencimento.plusMonths(quantidadeDeMeses).format(formatacaoData);
+        novaDataDeVencimento = dataDeVencimento.plusMonths(quantidadeDeMeses);
+
+        System.out.println("Nova data de vencimento: " + novaDataDeVencimento.format(formatacaoData));
 
 
 
