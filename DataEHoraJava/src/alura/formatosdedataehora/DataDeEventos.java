@@ -28,5 +28,7 @@ public class DataDeEventos {
         } else {
             System.out.println("Evento ainda não aconteceu!!");
         }
+
+        input.close();
     }
 }
