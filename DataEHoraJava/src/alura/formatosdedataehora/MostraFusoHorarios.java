@@ -18,7 +18,6 @@ public class MostraFusoHorarios {
         DateTimeFormatter formatacaoHora = DateTimeFormatter.ofPattern("HH:mm:ss");
 
 
-
         System.out.println("Horário Atual em Tóquio: " +horarioToquio.format(formatacaoHora));
         System.out.println("Horário atual em Nova York: " +horarioNovaYork.format(formatacaoHora));
     }
