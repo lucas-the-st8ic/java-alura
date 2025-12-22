@@ -18,5 +18,9 @@ public class Main {
         funcionario_01.exibirInformacoesFuncionario();
 
         funcionario_02.exibirInformacoesFuncionario();
+
+        funcionario_02.reajustarSalario(5);
+
+        funcionario_02.exibirInformacoesFuncionario();
     }
 }
