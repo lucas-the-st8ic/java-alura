@@ -14,6 +14,9 @@ public class Main {
         funcionario_02.nome = "Matheus";
         funcionario_02.cargo = "Gerente de Projetos";
         funcionario_02.salario = 10879;
-        
+
+        funcionario_01.exibirInformacoesFuncionario();
+
+        funcionario_02.exibirInformacoesFuncionario();
     }
 }
