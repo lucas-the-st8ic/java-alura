@@ -1,10 +1,11 @@
 import br.com.Alura.Funcionario;
+import br.com.Alura.Livro;
 import br.com.Alura.Produto;
 
 public class Main {
     static void main(String[] args) {
 
-        Funcionario funcionario_01 = new Funcionario();
+/*        Funcionario funcionario_01 = new Funcionario();
 
         funcionario_01.nome = "Lucas";
         funcionario_01.cargo = "Engenheiro de Software Sênior";
@@ -30,6 +31,13 @@ public class Main {
         produto_01.quantidadeProduto = 50;
 
         produto_01.exibirProduto();
-        System.out.println("Ele disse: \"Olá, Mundo!\"");
+        System.out.println("Ele disse: \"Olá, Mundo!\"");*/
+
+        Livro livro_cod001 = new Livro();
+        livro_cod001.titulo = "O guia do Mochileiro das Galáxias";
+        livro_cod001.autor = "Douglas Adams";
+        livro_cod001.paginas = 208;
+
+        livro_cod001.exibirInformacoesLivro();
     }
 }
