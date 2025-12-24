@@ -1,3 +1,4 @@
+import br.com.Alura.Conta;
 import br.com.Alura.Funcionario;
 import br.com.Alura.Livro;
 import br.com.Alura.Produto;
@@ -33,11 +34,20 @@ public class Main {
         produto_01.exibirProduto();
         System.out.println("Ele disse: \"Olá, Mundo!\"");*/
 
-        Livro livro_cod001 = new Livro();
+       /* Livro livro_cod001 = new Livro();
         livro_cod001.titulo = "O guia do Mochileiro das Galáxias";
         livro_cod001.autor = "Douglas Adams";
         livro_cod001.paginas = 208;
 
-        livro_cod001.exibirInformacoesLivro();
+        livro_cod001.exibirInformacoesLivro();*/
+
+        Conta contaNum_478 = new Conta();
+        contaNum_478.saldo = 1579.42;
+
+        contaNum_478.exibirOSaldo();
+
+        contaNum_478.zerarOSaldo();
+
+        contaNum_478.exibirOSaldo();
     }
 }
