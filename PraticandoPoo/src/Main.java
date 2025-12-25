@@ -47,10 +47,17 @@ public class Main {
 
         contaNum_478.exibirOSaldo();*/
 
-        SensorTemperatura novaAfericao = new SensorTemperatura();
+        /*SensorTemperatura novaAfericao = new SensorTemperatura();
         novaAfericao.local = "Setor A";
         novaAfericao.temperatura = 37;
 
-        novaAfericao.exibirRelatorio();
+        novaAfericao.exibirRelatorio();*/
+
+        Aluno aluno_01 = new Aluno();
+        aluno_01.nomeDoAluno = "Lucas da Silva Santos";
+        aluno_01.nota_1 = 6.5;
+        aluno_01.nota_2 = 6.5;
+
+        aluno_01.calcularMedia();
     }
 }
