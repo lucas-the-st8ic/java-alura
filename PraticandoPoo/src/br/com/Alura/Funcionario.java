@@ -3,11 +3,9 @@ package br.com.Alura;
 public class Funcionario {
 
     public String nome;
-    public String cargoNovo;
-    public String cargoAtual;
     public double salario;
+    public String cargoAtual;
     public int nivelDeAcessoAtual;
-    public int nivelDeAcessoNovo;
 
 
 
@@ -20,7 +18,7 @@ public class Funcionario {
         System.out.printf("Novo salario de %s é %.2f \n", nome, salario);
     }
 
-    public void alterarSetorAcesso () {
+    public void alterarSetorAcesso (String cargoNovo, int nivelDeAcessoNovo ) {
 
 
 
@@ -29,9 +27,13 @@ public class Funcionario {
         System.out.println("Nível de Acesso: " +nivelDeAcessoAtual);
         System.out.println("_____________________________________");
 
+        cargoAtual = cargoNovo;
+        nivelDeAcessoAtual = nivelDeAcessoNovo;
+
+
         System.out.println("\t---Novo acesso do funcionário---");
-        System.out.println("Nome: " + nome+ "\nCargo: " +cargoNovo);
-        System.out.println("Nível de Acesso: " +nivelDeAcessoNovo);
+        System.out.println("Nome: " + nome+ "\nCargo: " +cargoAtual);
+        System.out.println("Nível de Acesso: " +nivelDeAcessoAtual);
         System.out.println("_____________________________________");
     }
 }

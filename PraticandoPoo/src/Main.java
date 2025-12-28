@@ -64,10 +64,9 @@ public class Main {
         Funcionario funcionario_03 = new Funcionario();
         funcionario_03.nome = "Júlia Oliveira";
         funcionario_03.cargoAtual = "Pessoa Desenvolvedora Júnior";
-        funcionario_03.cargoNovo = "Pessoa Desenvolvedora Plena";
         funcionario_03.nivelDeAcessoAtual = 1;
-        funcionario_03.nivelDeAcessoNovo = 3;
 
-        funcionario_03.alterarSetorAcesso();
+
+        funcionario_03.alterarSetorAcesso("Pessoa Desenvolvedora Pleno", 3);
     }
 }
