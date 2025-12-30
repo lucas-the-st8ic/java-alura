@@ -8,13 +8,13 @@ public class Main {
 /*        Funcionario funcionario_01 = new Funcionario();
 
         funcionario_01.nome = "Lucas";
-        funcionario_01.cargo = "Engenheiro de Software Sênior";
+        funcionario_01.cargoAtual = "Engenheiro de Software Sênior";
         funcionario_01.salario = 15539;
 
         Funcionario funcionario_02 = new Funcionario();
 
         funcionario_02.nome = "Matheus";
-        funcionario_02.cargo = "Gerente de Projetos";
+        funcionario_02.cargoAtual = "Gerente de Projetos";
         funcionario_02.salario = 10879;
 
         funcionario_01.exibirInformacoesFuncionario();
@@ -23,14 +23,14 @@ public class Main {
 
         funcionario_02.reajustarSalario(5);
 
-        funcionario_02.exibirInformacoesFuncionario();
+        funcionario_02.exibirInformacoesFuncionario();*/
 
         Produto produto_01 = new Produto();
         produto_01.nomeProduto = "Mouse Gamer";
         produto_01.precoProduto = 451.90;
         produto_01.quantidadeProduto = 50;
 
-        produto_01.exibirProduto();
+    /*    produto_01.exibirProduto();
         System.out.println("Ele disse: \"Olá, Mundo!\"");*/
 
        /* Livro livro_cod001 = new Livro();
@@ -70,7 +70,7 @@ public class Main {
         funcionario_03.alterarSetorAcesso("Pessoa Desenvolvedora Pleno", 3);*/
 
 
-        ArrayList<Tarefa> listaDeTarefas = new ArrayList<>();
+      /*  ArrayList<Tarefa> listaDeTarefas = new ArrayList<>();
 
         Tarefa tarefa_01 = new Tarefa();
         tarefa_01.preencherDados();
@@ -82,8 +82,9 @@ public class Main {
 
         for(Tarefa t : listaDeTarefas) {
             System.out.println(t);
-        }
+        }*/
 
-
+        produto_01.venderProduto(25);
+        produto_01.venderProduto(50);
     }
 }
