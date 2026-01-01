@@ -1,11 +1,12 @@
 import br.com.Alura.*;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     static void main(String[] args) {
 
-/*        Funcionario funcionario_01 = new Funcionario();
+/*      Funcionario funcionario_01 = new Funcionario();
 
         funcionario_01.nome = "Lucas";
         funcionario_01.cargoAtual = "Engenheiro de Software Sênior";
@@ -25,18 +26,18 @@ public class Main {
 
         funcionario_02.exibirInformacoesFuncionario();*/
 
-        Produto produto_01 = new Produto();
-        produto_01.nomeProduto = "Mouse Gamer";
-        produto_01.precoProduto = 451.90;
-        produto_01.quantidadeProduto = 50;
+        Produto produto01 = new Produto();
+        produto01.nomeProduto = "Mouse Gamer";
+        produto01.precoProduto = 100.00;
+        produto01.quantidadeProduto = 50;
 
-    /*    produto_01.exibirProduto();
+    /*  produto01.exibirProduto();
         System.out.println("Ele disse: \"Olá, Mundo!\"");*/
 
-        Livro livro_cod001 = new Livro();
+      /*  Livro livro_cod001 = new Livro();
         livro_cod001.titulo = "O guia do Mochileiro das Galáxias";
         livro_cod001.autor = "Douglas Adams";
-        livro_cod001.paginas = 208;
+        livro_cod001.paginas = 208;*/
 
         /*livro_cod001.exibirInformacoesLivro();*/
 
@@ -84,11 +85,49 @@ public class Main {
             System.out.println(t);
         }*/
 
-        produto_01.venderProduto(25);
-        produto_01.venderProduto(50);
+        /*produto01.venderProduto(25);
+        produto01.venderProduto(50);*/
 
-        livro_cod001.diasDeAtraso = 3;
+        /*livro_cod001.diasDeAtraso = 3;
 
-        livro_cod001.exibirMultaPorAtraso();
+        livro_cod001.exibirMultaPorAtraso();*/
+
+        List<Produto> carrinhoDeCompras = new ArrayList<>();
+
+
+        Produto produto02 = new Produto();
+        produto02.nomeProduto = "Teclado";
+        produto02.precoProduto = 120.0;
+        produto02.quantidadeProduto = 10;
+
+        Produto produto03 = new Produto();
+        produto03.nomeProduto = "Monitor";
+        produto03.precoProduto = 100.00;
+        produto03.quantidadeProduto = 5;
+
+        Produto produto04 = new Produto();
+        produto04.nomeProduto = "Webcam";
+        produto04.precoProduto = 150.0;
+        produto04.quantidadeProduto = 12;
+
+        Produto produto05 = new Produto();
+        produto05.nomeProduto = "Mouse";
+        produto05.precoProduto = 100.0;
+        produto05.quantidadeProduto = 25;
+
+        carrinhoDeCompras.add(produto01);
+        carrinhoDeCompras.add(produto02);
+        carrinhoDeCompras.add(produto03);
+        carrinhoDeCompras.add(produto04);
+        carrinhoDeCompras.add(produto05);
+
+        double totalCarrinho = 0;
+
+        for (Produto item : carrinhoDeCompras) {
+                totalCarrinho += item.calcularProduto();
+        }
+
+        System.out.printf("Total da compra: R$ %.2f\n", totalCarrinho);
+
     }
 }

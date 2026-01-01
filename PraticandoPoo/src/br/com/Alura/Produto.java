@@ -21,4 +21,8 @@ public class Produto {
             System.out.println("Quantidade restante em estoque: " +quantidadeProduto);
         }
     }
+
+    public double calcularProduto() {
+        return precoProduto * quantidadeProduto;
+    }
 }
