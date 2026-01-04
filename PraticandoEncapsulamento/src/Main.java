@@ -1,5 +1,6 @@
 import br.com.alura.encapsulamento.Carro;
 import br.com.alura.encapsulamento.Contato;
+import br.com.alura.encapsulamento.Produto;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -28,5 +29,11 @@ public class Main {
                     contato.getTelefone());
         }
 
+
+        Produto produto001 = new Produto();
+        produto001.setNomeProduto("Mouse bluetooth gamer");
+        produto001.setValorProduto(-59.90);
+
+        System.out.printf("Produto: %s \nPreço: %.2f\n", produto001.getNomeProduto(), produto001.getValorProduto());
     }
 }
