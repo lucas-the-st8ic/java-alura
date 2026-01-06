@@ -3,7 +3,7 @@ package br.com.alura.encapsulamento;
 public class Conta {
     private String titularConta;
     private double saldoConta;
-    
+
 
     public String getTitularConta() {
         return titularConta;
@@ -16,6 +16,7 @@ public class Conta {
 
     public Conta(String titularConta) {
         this.titularConta = titularConta;
+        this.saldoConta = 0;
     }
 
     public void depositar(double valor) {
@@ -23,17 +24,14 @@ public class Conta {
             this.saldoConta +=  valor;
         } else if (valor < 0) {
             System.out.println("Não é possível depositar valores negativos!! Operação encerrada");
-            System.out.printf("Saldo em conta: R$ %2.f ", saldoConta);
         }
     }
 
     public void sacar(double valor) {
-        if(valor > saldoConta){
-            System.out.println("Saldo insuficiente para saque!!");
-            System.out.printf("Saldo em conta: R$ %2.f%n", saldoConta);
-        } else  {
+        if(valor <= this.saldoConta){
             this.saldoConta -= valor;
-            System.out.printf("Saldo em conta: R$ %2.f%n", saldoConta);
+        } else {
+            System.out.println("Saldo insuficiente para saque.");
         }
     }
 

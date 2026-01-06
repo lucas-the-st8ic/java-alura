@@ -40,18 +40,28 @@ public class Main {
 
         newUser.setSenha("246810", "abc123");*/
 
-        Bateria bateriaNova = new Bateria();
+       /* Bateria bateriaNova = new Bateria();
 
         bateriaNova.setNivelBateria(20);
-        System.out.println("Status: " + bateriaNova.exibeNivelBateria());
+        System.out.println("Status: " + bateriaNova.exibeNivelBateria());*/
 
-        Conta novaConta = new Conta("Ana");
+        /*Conta novaConta = new Conta("Ana");
         novaConta.depositar(1000);
-        novaConta.sacar(1500);
+        novaConta.sacar(1300);
         novaConta.sacar(200);
         novaConta.exibirSaldo();
 
+        novaConta.sacar(800);
+        novaConta.exibirSaldo();*/
+
+        Filme matrix = new Filme("Matrix");
+        matrix.adicionarAvaliacao(5);
+        matrix.adicionarAvaliacao(4);
+        matrix.adicionarAvaliacao(5);
+        matrix.adicionarAvaliacao(3);
+        matrix.adicionarAvaliacao(4);
+
+        System.out.printf("Média de avaliações para %s: %.2f\n", matrix.getTitulo(), matrix.calcularMedia());
+
     }
-
-
 }
