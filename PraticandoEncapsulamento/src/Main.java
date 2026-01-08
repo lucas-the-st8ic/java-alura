@@ -92,13 +92,21 @@ public class Main {
             }
         }*/
 
-
-
-        Aluno fernanda = new Aluno("Fernanda");
+       /* Aluno fernanda = new Aluno("Fernanda");
         fernanda.ganharPontos(99);
         fernanda.exibirStatus();
         fernanda.ganharPontos(1);
         fernanda.ganharPontos(99);
-        fernanda.exibirStatus();
+        fernanda.exibirStatus();*/
+
+        MediaPorMateria matematica = new MediaPorMateria("Matematica");
+        matematica.adicionarNota(7.5);
+        matematica.adicionarNota(1000);
+        matematica.adicionarNota(8);
+        matematica.adicionarNota(-3);
+        matematica.adicionarNota(9.5);
+
+        System.out.println("Total de notas válidas: " +matematica.getNotasValidas());
+        System.out.printf("Média em %s: %.2f", matematica.getNomeMateria(), matematica.mediaNotas());
     }
 }
