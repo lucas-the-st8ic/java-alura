@@ -1,6 +1,6 @@
 package br.com.Alura;
 
-public class Relatorio {
+public class Relatorio implements Imprimir {
     protected String titulo;
     protected String conteudo;
 
@@ -15,5 +15,10 @@ public class Relatorio {
 
     public String getConteudo() {
         return conteudo;
+    }
+
+    public void imprimirRelatorio() {
+        System.out.println("Título: " + titulo);
+        System.out.println("Conteúdo: " + conteudo);
     }
 }

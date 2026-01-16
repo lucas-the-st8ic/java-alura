@@ -1,4 +1,7 @@
 package br.com.Alura;
 
-public interface Imprimir {
+interface Imprimir {
+
+    void imprimirRelatorio();
+
 }
