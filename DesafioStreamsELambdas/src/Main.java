@@ -1,7 +1,5 @@
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class Main {
@@ -15,7 +13,9 @@ public class Main {
 
         List<String> palavras = Arrays.asList("java", "stream", "lambda", "code");
 
-        Optional<String> palavrasAgrupadas = palavras.stream()
-                .collect()
+        Map<Integer, List<String>> agrupamento = palavras.stream()
+                .collect(Collectors.groupingBy(String::length));
+
+        System.out.println(agrupamento);
     }
 }
