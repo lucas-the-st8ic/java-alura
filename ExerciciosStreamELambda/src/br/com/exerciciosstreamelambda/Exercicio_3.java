@@ -12,6 +12,8 @@ public class Exercicio_3 {
             String listaDeNomes = nomes.stream()
                     .collect(Collectors.joining(", "));
 
+            //String listaDeNomes = String.join(", ", nomes);
+
             System.out.println(listaDeNomes);
         }
 }
