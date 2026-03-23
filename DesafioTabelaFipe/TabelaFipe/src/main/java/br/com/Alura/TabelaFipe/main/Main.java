@@ -2,9 +2,11 @@ package br.com.Alura.TabelaFipe.main;
 
 import br.com.Alura.TabelaFipe.model.Dados;
 import br.com.Alura.TabelaFipe.model.Modelos;
+import br.com.Alura.TabelaFipe.model.Veiculo;
 import br.com.Alura.TabelaFipe.service.ConsumoApi;
 import br.com.Alura.TabelaFipe.service.ConverteDados;
 
+import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
@@ -50,7 +52,7 @@ public class Main {
 
 
         System.out.print("Informe o código da marca" +
-                "para realizar a consulta: ");
+                " para realizar a consulta: ");
         var codigoMarca = input.nextLine();
 
         endereco = endereco+ "/" +codigoMarca+ "/modelos";
@@ -68,12 +70,12 @@ public class Main {
 
 
         System.out.print("Digite o nome de um veículo para busca detalhada: ");
-        var veiculo = input.nextLine();
+        var modelo = input.nextLine();
 
         List<Dados> modelosDoVeiculo = modeloLista.modelos()
                 .stream()
                 .filter(m -> m.nome().toLowerCase()
-                        .contains(veiculo.toLowerCase()))
+                        .contains(modelo.toLowerCase()))
                 .collect(Collectors.toList());
 
         System.out.println("\nModelos do veículo encontrados: ");
@@ -89,6 +91,20 @@ public class Main {
 
         List<Dados> anosDisponiveis = conversor.obterLista(json, Dados.class);
 
-        anosDisponiveis.stream();
+        List<Veiculo> listaVeiculos = new ArrayList<>();
+
+        for(int i = 0; i < anosDisponiveis.size(); i++) {
+            var enderecoAnos = endereco+ "/" + anosDisponiveis.get(i).codigo();
+
+            json = consumoApi.obterdados(enderecoAnos);
+            Veiculo veiculo = conversor.obterDados(json, Veiculo.class);
+
+            listaVeiculos.add(veiculo);
+        }
+
+        System.out.println("\nVeiculos disponiveis encontrados por ano" +
+                " de fabricação: ");
+
+        listaVeiculos.forEach(System.out::println);
     }
 }
