@@ -6,7 +6,9 @@ import br.com.Alura.TabelaFipe.service.ConsumoApi;
 import br.com.Alura.TabelaFipe.service.ConverteDados;
 
 import java.util.Comparator;
+import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 public class Main {
 
@@ -64,5 +66,29 @@ public class Main {
                 .sorted(Comparator.comparing(Dados::codigo))
                 .forEach(System.out::println);
 
+
+        System.out.print("Digite o nome de um veículo para busca detalhada: ");
+        var veiculo = input.nextLine();
+
+        List<Dados> modelosDoVeiculo = modeloLista.modelos()
+                .stream()
+                .filter(m -> m.nome().toLowerCase()
+                        .contains(veiculo.toLowerCase()))
+                .collect(Collectors.toList());
+
+        System.out.println("\nModelos do veículo encontrados: ");
+        modelosDoVeiculo.forEach(System.out::println);
+
+        System.out.print("Digite o código do modelo específico de veículo" +
+                " que você procura: ");
+        var codigoveiculo = input.nextLine();
+
+        endereco = endereco+ "/" +codigoveiculo+ "/anos";
+
+        json = consumoApi.obterdados(endereco);
+
+        List<Dados> anosDisponiveis = conversor.obterLista(json, Dados.class);
+
+        anosDisponiveis.stream();
     }
 }
